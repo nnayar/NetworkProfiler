@@ -1,0 +1,6 @@
+# Dependency directories
+node_modules
+electron-quick-start
+app/bootstrap-3.3.7
+app/css/bootstrap-3.3.7
+

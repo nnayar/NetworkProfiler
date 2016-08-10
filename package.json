@@ -1,0 +1,19 @@
+{
+  "name": "hero-browser",
+  "version": "0.1.0",
+  "main": "main.js",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "fast-cli": "*",
+    "imap-simple": "^1.5.0",
+    "md5": "^2.1.0",
+    "native-dns": "^0.7.0",
+    "ntp-client": "^0.5.3",
+    "ping": "^0.1.10",
+    "ping-lite": "^1.0.1",
+    "poplib": "^0.1.7",
+    "speed-test": "*",
+    "speedconcat": "^1.0.2",
+    "tcpie": "^3.0.6"
+  }
+}

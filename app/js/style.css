@@ -1,0 +1,142 @@
+@charset 'utf-8';
+
+body {
+	font-family: Avenir;
+}
+.todo-list {
+	width:800px;
+	margin:5rem auto;
+	padding:2em;
+
+	background:#fafafa;
+	border:1px solid #ccc;
+	border-radius: 3px;
+}
+.todo-list h1 {
+	margin-top:0;
+}
+.todo-list ul {
+	margin:1em 0;
+	padding:0;
+	overflow:hidden;
+}
+.todo-list li {
+	position:relative;
+	display:block;
+	padding:0.5em 1em;
+	border-bottom:1px solid #ccc;
+	cursor:pointer;
+	transition:0.3s;
+}
+
+
+/* Added styles to show tasks that are done */
+
+.todo-list li.is-done:before {
+	content:"✔︎";
+	margin-right:0.25em;
+}
+
+/* end new styles */
+
+
+.todo-list li.is-hidden {
+	transform:translate( 100% );
+	opacity:0;
+}
+.todo-list li:first-child {
+	border-top:1px solid #ccc;
+}
+.remove-item {
+	position:absolute;
+	top:0;
+	right:0;
+	display:none;
+	padding:0.5em;
+	color:#999;
+	text-decoration:none;
+}
+.todo-list li:hover .remove-item {
+	display:block;
+}
+
+
+.display-options {
+	width:800px;
+	margin:5rem auto;
+	padding:2em;
+
+	background:#fafafa;
+	border:1px solid #ccc;
+	border-radius: 3px;
+}
+.display-options h1 {
+	margin-top:0;
+}
+.display-options ul {
+	margin:1em 0;
+	padding:0;
+	overflow:hidden;
+}
+.display-options li {
+	position:relative;
+	display:block;
+	padding:0.5em 1em;
+	border-bottom:1px solid #ccc;
+	cursor:pointer;
+	transition:0.3s;
+}
+.todo-name {
+	display: inline-block;
+	width: 30%;
+}
+.todo-duedate {
+	display: inline-block;
+	width: 30%;
+}
+.todo-priority {
+	display: inline-block;
+	width: 30%;
+}
+.priority-options {
+	display: inline-block;
+	width: 50%;
+}
+.sort-todo {
+	width:800px;
+	margin:5rem auto;
+	padding:2em;
+
+	background:#fafafa;
+	border:1px solid #ccc;
+	border-radius: 3px;
+}
+.sort-choices {
+	display: inline-block;
+	width: 50%;
+}
+
+
+form {
+	display:flex;
+}
+form input {
+	padding:0.5em 1em;
+	font-size:inherit;
+	border:1px solid #ccc;
+}
+form input:focus {
+	outline:0;
+}
+form input[type="text"] {
+	flex:1;
+	background:#fff;
+}
+form input[type="submit"] {
+	background:lightblue;
+	transition:0.4s;
+	cursor:pointer;
+}
+form input[type="submit"]:hover {
+	background:#60d9ef;
+}

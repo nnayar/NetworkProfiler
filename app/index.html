@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Bootstrap Example</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+		 <!-- Insert this line above script imports  -->
+		<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+	 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+		<!-- Insert this line after script imports -->
+		<script>if (window.module) module = window.module;</script>
+		
+		<link href="css/index.css" rel="stylesheet" type="text/css"/>
+
+	</head>
+	<body>
+
+	<div class="container">
+		<h2>Network Interface Table</h2>
+			<table class="table">
+			<thead>
+				<tr>
+					<th>Address</th>
+					<th>Family</th>
+					<th>Netmask</th>
+					<th>MAC Address</th>
+				</tr>
+			</thead>
+			<tbody id="network-interfaces">
+			</tbody>
+	</div>
+
+<!-- 	<div class="container">
+		<h2>DNS Information and Test results</h2>
+			<table class="table">
+			<thead>
+				<tr>
+					<th>Address</th>
+					<th>Family</th>
+					<th>Netmask</th>
+					<th>MAC Address</th>
+				</tr>
+			</thead>
+			<tbody id="dns-information">
+			</tbody>
+	</div>
+
+	<div class="container">
+		<h2>HTTP / HTTPS Test results </h2>
+			<table class="table">
+			<thead>
+				<tr>
+					<th>Address</th>
+					<th>Family</th>
+					<th>Netmask</th>
+					<th>MAC Address</th>
+				</tr>
+			</thead>
+			<tbody id="http-information">
+			</tbody>
+	</div>
+ -->
+		<script id="item-template" type="x-handlebars-template">
+				<tr class ="network-interface">
+					<td class='network-interface-address' id='network-interface-address'>{{ address }}</td>
+					<td class='network-interface-family' id='network-interface-family'>{{ family }}</td>
+					<td class='network-interface-netmask' id='network-interface-netmask'>{{ netmask  }}</td>
+					<td class='network-interface-mac' id='network-interface-mac'>{{ mac  }}</td>
+					// <a href="#" class="remove-item">x</a>
+				</tr>
+			</script>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="handlebars-v4.0.5.js"></script>
+
+		<script src="js/index.js"></script>
+
+		<!-- Insert this line after script imports -->
+		<script>if (window.module) module = window.module;</script>
+	</body>
+</html>
+
