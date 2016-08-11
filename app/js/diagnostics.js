@@ -7,6 +7,7 @@ var Ping = require("ping-lite");
 var ping = require("ping");
 var tcpPing = require("tcpie");				//	https://www.npmjs.com/package/tcpie
 var speedconcat = require("speedconcat");
+var WiFiControl = require('wifi-control');
 
 var diagnostics = {};
 var testURL = "google.com";
@@ -19,6 +20,22 @@ diagnostics.setTestURL = function(replacement) {
 	testURL = replacement;
 	return;
 };
+
+diagnostics.wifiInit = function() {		//  Initialize wifi-control package with verbose output
+	WiFiControl.init({
+		debug: false
+	});
+
+	WiFiControl.scanForWiFi( function(err, response) {
+		if (err) console.log(err);
+		console.log("the response of scanForWiFi is", response);
+	});
+	return 
+};
+
+diagnostics.wifiScan = function() {		//  Try scanning for access points:
+	
+};	
 
 diagnostics.checkInterfaces = function() {
 	console.log( 'I was here' );
